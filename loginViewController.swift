@@ -10,11 +10,30 @@ import UIKit
 
 class loginViewController: UIViewController {
 
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var register: UIButton!
+    
+   
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        
+        UserDefaults.standard.set(true, forKey: "isuserLoggedin")
+        self.dismiss(animated: true, completion: nil)
+              
+    }
+    
+  
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

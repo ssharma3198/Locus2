@@ -21,6 +21,13 @@ class logoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        UserDefaults.standard.set(false, forKey: "isuserLoggedin")
+        self.tabBarController!.selectedIndex = 0
+    }
 
     /*
     // MARK: - Navigation
